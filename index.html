@@ -1,16 +1,74 @@
-<!doctype html><html lang="en"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Harpokrates</title>
-<style>
-  html,body{margin:0;height:100%;background:#0d0f12;color:#cde8ff;font:16px/1.6 ui-monospace,Menlo,Consolas,monospace}
-  .wrap{max-width:780px;margin:0 auto;padding:80px 24px;text-align:center}
-  h1{margin:0 0 .25em;font-size:42px;color:#fff;letter-spacing:.06em}
-  p{opacity:.85} .tag{color:#58b7ff}
-  a{color:#7ed7ff}
-</style>
-<div class="wrap">
-  <h1>Harpokrates</h1>
-  <p class="tag">Strategic Silence · Private Intelligence</p>
-  <p>Signals when it matters. Coming soon.</p>
-  <p><a href="mailto:info@harpokrates.io">info@harpokrates.io</a></p>
-</div></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harpokrates — Silence the Noise. Ship the Signal.</title>
+  <meta name="description" content="Harpokrates builds quiet, reliable cloud automations and security-first foundations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070b10; --fg:#eaf2ff; --muted:#aeb7c7;
+      --c1:#00e7d4; --c2:#ffd166;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:var(--fg);
+         background: radial-gradient(900px 900px at 10% 10%, #112035 0%, transparent 55%),
+                     radial-gradient(1000px 900px at 90% 110%, #1b1230 0%, transparent 60%),
+                     linear-gradient(#070b10,#0b1017);
+         display:flex; align-items:center; justify-content:center; padding:24px;}
+    .wrap{max-width:980px; width:100%}
+    .card{background:#ffffff0e; border:1px solid #ffffff18; border-radius:18px; padding:28px;
+          box-shadow:0 22px 60px rgba(0,0,0,.55); backdrop-filter:saturate(125%) blur(6px);}
+    .eyebrow{display:inline-block; padding:6px 10px; border-radius:999px; letter-spacing:.4px;
+             text-transform:uppercase; font-size:12px; color:var(--muted); border:1px solid #ffffff24;}
+    h1{font-size:clamp(36px,6.4vw,68px); line-height:1.02; margin:14px 0 10px}
+    .grad{background:linear-gradient(135deg,var(--c1),var(--c2)); -webkit-background-clip:text;
+          background-clip:text; color:transparent; text-shadow:0 10px 40px #00e7d422;}
+    p{color:var(--muted); font-size:18px; margin:0 0 18px}
+    .row{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .btn{border-radius:14px; padding:12px 18px; font-weight:800; border:0; cursor:pointer}
+    .primary{background:linear-gradient(135deg,var(--c1),#1de9a6); color:#031312}
+    .ghost{background:transparent; border:1px solid #ffffff25; color:var(--fg)}
+    .kpis{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:18px}
+    .kpi{background:#0d141f; border:1px solid #ffffff1a; border-radius:14px; padding:14px}
+    .small{font-size:12px; opacity:.8}
+    footer{margin-top:16px; color:#9fb0c8; font-size:14px}
+    a{color:#8de8ff; text-decoration:none} a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <span class="eyebrow">Harpokrates</span>
+      <h1>Silence the noise. <span class="grad">Ship the signal.</span></h1>
+      <p>
+        We build quiet, dependable automations and <strong>security-first</strong> cloud foundations.
+        Azure landing zones, GitHub Actions, PowerShell/Python tooling — engineered to be boring (in the best way).
+      </p>
+      <div class="row">
+        <a class="btn primary" href="mailto:hello@harpokrates.io">Start a conversation</a>
+        <a class="btn ghost" href="/">Back to home</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi">
+          <div class="small">Platforms</div>
+          Azure • M365 • GitHub • Key Vault
+        </div>
+        <div class="kpi">
+          <div class="small">Focus</div>
+          Automation • Hardening • Observability
+        </div>
+        <div class="kpi">
+          <div class="small">Outcome</div>
+          Fewer alerts. Fewer surprises. Faster ships.
+        </div>
+      </div>
+      <footer>© <span id="y"></span> Harpokrates • <a href="mailto:hello@harpokrates.io">hello@harpokrates.io</a></footer>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
